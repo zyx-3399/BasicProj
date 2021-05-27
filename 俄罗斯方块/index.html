@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>俄罗斯方块</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        html{
+            height: 100%;
+        }
+        body{
+            overflow: hidden;
+            background: url("1.jpg") repeat-y bottom right ,url("1.jpg") repeat-y bottom left ,pink;
+            background-size: 20% 50%;
+        }
+        #table1{
+            position: absolute;
+            top: 12px;
+            right:500px;
+            border-collapse: collapse;
+        }
+        #table2{
+            position: absolute;
+            top: 12px;
+            right: 320px;
+            border-collapse: collapse;
+        }
+        #score{
+            text-shadow: 5px 5px 5px #FF0000;
+            position: absolute;
+            top: 20px;
+            left: 350px;
+        }
+        #text{
+            text-shadow: 5px 5px 5px #FF0000;
+            position: absolute;
+            top: 150px;
+            right: 310px;
+        }
+        td{
+            border: none;
+            width: 30px;
+            height:30px;
+            background-color: white;
+        }
+        .c1{
+            background: linear-gradient(to top, #ff36de, #e22753);
+        }
+        .c2{
+            background: linear-gradient(to top, #fffd72, #fffc2e);
+        }
+        .c3{
+            background: linear-gradient(to top, #46ffd4, #129ec9);
+        }
+        .c4{
+            background: linear-gradient(to top, #5b2fd5, #934ede);
+        }
+        .c5{
+            background: linear-gradient(to top, #45ff4a, #0de33c);
+        }
+        .c6{
+            background: linear-gradient(to top,#fb75ff, #d129ff);
+        }
+        .c7{
+            background: linear-gradient(to top, #ff5411, #d06412);
+        }
+    </style>
+</head>
+<body>
+<h2 id="score">score:0</h2>
+<h2 id="text">Is Coming!!!</h2>
+<script src="jquery-3.6.0.min.js"></script>
+<script src="Game.js"></script>
+<script src="block_json.js"></script>
+<script src="Block.js"></script>
+<script src="Map.js"></script>
+<script >
+    let game=new Game();
+</script>
+</body>
+</html>

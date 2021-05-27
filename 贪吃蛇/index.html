@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>贪吃蛇</title>
+    <style>
+        h3{
+            color: white;
+        }
+        body{
+            background: #333;
+        }
+        table{
+            border-collapse: collapse;
+            border:1px solid #fff;
+        }
+        td{
+            width: 24px;
+            height:24px;
+            border:1px solid #fff;
+            text-align: center;
+            color: crimson;
+        }
+    </style>
+</head>
+<body>
+<h3 id="score">分数：0</h3>
+<div id="app"></div>
+<script src="Game.js"></script>
+<script src="Snake.js"></script>
+<script src="Food.js"></script>
+<script>
+    var game = new Game();
+</script>
+</body>
+</html>

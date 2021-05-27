@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue基础</title>
+</head>
+<style type="text/css">
+    img{
+        width:100px ;
+        height:100px
+    }
+    #app{
+        
+        position:absolute;
+        left:45%;
+        top:100px;
+    }
+    /*span{*/
+    /*    width: 20px;*/
+    /*    padding: 10px;*/
+    /*    margin: 0;*/
+    /*}*/
+    button{
+        background-color: deeppink;
+    }
+</style>
+<body>
+<div id="app">
+    <button @click="tagisShow">切换</button>
+    <img v-bind:src="imgSrc" v-if="isShow" v-bind:title="imgTitle">
+<!--        <button @click="sub">-</button>-->
+<!--        <span>{{num}}</span>-->
+<!--        <button @click="add">+</button>-->
+<!--    <input type="button" value="v-on" @click="doIt">-->
+<!--    <h2 @click="changeFood">{{food}}</h2>-->
+<!--    <h2 v-text="message+'!'"></h2>-->
+<!--    <span >{{school.name}}{{school.mobile}}</span>-->
+<!--    <p v-text="content"></p>-->
+<!--    <p v-html="content"></p>-->
+<!--    <ul>-->
+<!--        <li>{{campus[0]}}</li>-->
+<!--        <li>{{campus[1]}}</li>-->
+<!--        <li>{{campus[2]}}</li>-->
+<!--    </ul>-->
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    var app=new Vue({
+        el:"#app",
+        data:{
+            isShow:"false",
+            imgSrc:"../19.jpg",
+            imgTitle:"老婆"
+            // num:"1"
+            // food:"墨鱼排骨汤"
+            // content:"<a href='http://www.itheima.com'>黑马程序员</a>",
+            // message:"Hello Vue!",
+            // school: {
+            //     name: "黑马程序员",
+            //     mobile: "400-618-9090"
+            // },
+            // campus:["北京校区","上海校区","广州校区"]
+        },
+        methods:{
+            tagisShow:function (){
+                this.isShow=!this.isShow;
+            }
+            // add:function (){
+            //     this.num++;
+            // },
+            // sub:function (){
+            //     this.num--;
+            // }
+           // doIt:function(){
+           //      alert("做IT");
+           //  }
+           //  changeFood:function (){
+                // console.log(this.food)
+                // this.food+=" 好好吃！"
+            }
+    })
+</script>
+</body>
+</html>

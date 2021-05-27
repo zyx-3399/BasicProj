@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片切换</title>
+    <style>
+        #main{
+            width: 200px;
+            height: 200px;
+        }
+        .row{
+            width: 50px;
+            height: 200px;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="mask">
+        <h3>今晚就决定是你了</h3>
+        <a href="#" @click="prev" v-show="index!=0"><img class="row" src="../img/左箭头%20.png"></a>
+        <img id="main" :src="imgArr[index]">
+        <a href="#" @click="next" v-show="index< imgArr.length-1"><img  class="row" src="../img/右箭头.png"></a>
+</div>
+<script>
+    var app=new Vue({
+        el:"#mask",
+        data:{
+            imgArr:[
+                "../img/1.jpg",
+                "../img/2.jpg",
+                "../img/3.jpg",
+                "../img/4.jpg",
+                "../img/5.jpg",
+                "../img/6.jpg",
+                "../img/7.jpg",
+                "../img/8.jpg",
+                "../img/9.jpg",
+                "../img/10.jpg",
+                "../img/11.jpg",
+                "../img/12.jpg",
+                "../img/13.jpg",
+                "../img/14.jpg",
+                "../img/15.jpg",
+                "../img/16.jpg",
+                "../img/17.jpg",
+                "../img/18.jpg",
+                "../img/19.jpg",
+            ],
+            index:0
+        },
+        methods:{
+          prev:function (){
+              this.index--;
+          },
+          next:function (){
+              this.index++;
+          }
+        }
+    })
+</script>
+</body>
+</html>
